@@ -4,9 +4,12 @@
 ```
 ```
 
-## Launch Kotlin:
+# Launch Kotlin:
 
 We provided a bash script for you in order to ease the execution of your code
+
+```
+```
 
 # Exercice 1 : Syntax
 
@@ -22,18 +25,15 @@ The output should be identical to the contents of [this file](./1.txt):
 # Exercice 2 : List
 
 Write a "Countword" function whose objective is to count the number of times a word appears in a sentence.
-You will first need to separate the sentence into smaller words you can compare the target to.
 This function takes 2 parameters :
 
     - "sentence" -> the sentence you will search through
     - "target" -> the word you look for in the sentence
 
-You might find help here:
-(https://www.Kotlin.org/pil/2.5.html)
 
 Example:
 
-```Kotlin
+```
 Countword('ton tonton tond ton thon', "ton") -> ton appears 2 times
 ```
 
@@ -44,7 +44,7 @@ Write a function that takes n parameters as Strings and add them together.
 
 Examples:
 
-```Kotlin
+```
 Calculator("4", '5') -> 9
 Calculator('3', '4', '3', '5', '7', '8', '1') -> 31
 ```
@@ -56,8 +56,9 @@ Modify your Calculator function to now handle invalid parameters.
 
 Example:
 
-```Kotlin
+```
 CalculatorV2("4", '5', 'a') -> "Invalid Parameter: a"
+CalculatorV2("4", '5', 1) -> 10
 ```
 
 
@@ -81,71 +82,67 @@ I take care not to trouble myself with any enemies, like winning and losing, tha
 
 # Exercice 6 : OOP basics
 
-Create a Pet function returning a map with the properties "name" and "status".
+Create a Pet class with the properties "name" and "status".
 
 If no parameter is provided, the default values for __"name"__ and __"status"__ will be __"Kikki"__ and __"Hungry"__ respectively.
 
 
 # Exercice 7 : Methods
 
-Add 2 methods to your Pet map:
+Add 2 methods to your Pet class:
+
     - check: display the pet's name and status
     - feed: set the pet's status to "Fed" 
 
 Example:
 
-```Kotlin
-local animal = Pet("Minou", "on fire")
+```
+val animal = Pet("Minou", "on fire")
 
-animal.check(animal) -> "Minou is on fire"
-animal.feed(animal) -> "Minou has been fed"
+animal.check() -> "Minou is on fire"
+animal.feed() -> "Minou has been fed"
 ```
 
 
 # Exercice 8 : Inheritance
 
-Create a Dog map derived from your Pet map which takes 3 parameters : name, status and breed.
+Create a Dog class derived from your Pet class which takes 3 parameters : name, status and breed.
 
 Add 2 new properties :
 
-    - breed (_"Australian Shepherd"_ by default)
+    - breed ("Australian Shepherd" by default)
     - loyalty (set to 0)
 
 Over-ride the default name to now be __"Meimei"__.
-Over-ride the FEED method to now increase the LOYALTY by 5
 
-Add 2 new methods:
+Over-ride the FEED method to now also increase the LOYALTY by 10
+
+Add a new method:
 
     - isLoyal -> display "is loyal" if loyalty is supertior to 10
-    - bark -> display "Woof Woof"
 
 Example:
 
-```Kotlin
-    local dog = Dog()
-    dog.isLoyal(dog) -> "Meimei is NOT loyal"
-    dog.feed(dog) -> "Meimei has been fed"
-    dog.feed(dog) -> "Meimei has been fed"
-    dog.isLoyal(dog) -> "Meimei is loyal"
-    dog.check(dog) -> "Meimei is a Fed Australian Shepherd"
+```
+    val dog = Dog()
+    dog.isLoyal() -> "Meimei is NOT loyal"
+    dog.feed()
+    dog.isLoyal() -> "Meimei is loyal"
+    dog.check() -> "Meimei is a Fed Australian Shepherd"
 ```
 
 
-# Exercice 9 : metatables
+# Exercice 9 : extensions
 
-Create a metatable to execute additions and substractions between 2 maps.
+Create a **bark** method *outside* of your Dog class
 
 _This example is lackluster by choice_
 
 Example:
 
-```Kotlin
-local t1 = {x = 5, y = 10}
-local t2 = {x = 15, y = 15}
-
-local t3 = t1 + t2
-
--- t3.x should be equal to 20 and t3.y should be equal to 25
+```
+    val dog = Dog()
+    dog.bark() -> "woof woof"
 ```
 
 
