@@ -1,15 +1,36 @@
 # Workshop-Kotlin
 
 ## Install Kotlin:
+
+UBUNTU:
 ```
+$ sudo apt update
+$ sudo apt install default-jdk
+$ curl -s https://get.sdkman.io | bash
+(restart your computer here)
+$ sdk install kotlin
 ```
+
+FEDORA:
+```
+$ sudo dnf install snapd
+$ sudo ln -s /var/lib/snapd/snap /snap
+$ sudo snap install kotlin --classic
+```
+
+WINDOWS/MacOS:
+
+## Click [here](https://kotlinlang.org/docs/command-line.html)
+
+# ---------------------------
+
+*Or just use [Android Studio](https://developer.android.com/studio)*
 
 # Launch Kotlin:
 
 We provided a bash script for you in order to ease the execution of your code
 
-```
-```
+# ---------------------------
 
 # Exercice 1 : Syntax
 
